@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حجز الفنادق</title>
+    <title>LuxuryStay</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
-        <h1 id="title">مرحبا بك في موقع حجز الفنادق</h1>
-        <!-- زر لتبديل اللغة -->
-        <button onclick="switchLanguage()">Switch to English</button>
+        <h1 id="title">مرحبا بك في LuxuryStay</h1>
     </header>
 
     <section class="hotel-list">
@@ -42,34 +40,5 @@
 
     <script src="script.js"></script>
 
-    <script>
-        // دالة لتبديل النصوص بين اللغة العربية والإنجليزية
-        function switchLanguage() {
-            // التبديل بين النصوص العربية والإنجليزية
-            if (document.documentElement.lang === "ar") {
-                document.getElementById("title").innerText = "Welcome to the Hotel Booking Site";
-                document.getElementById("available-hotels").innerText = "Available Hotels";
-                document.getElementById("marriott-name").innerText = "Marriott";
-                document.getElementById("marriott-description").innerText = "Marriott Hotel offers luxurious services in various locations.";
-                document.getElementById("hilton-name").innerText = "Hilton";
-                document.getElementById("hilton-description").innerText = "Hilton Hotel offers a comfortable and exceptional experience for guests.";
-                document.getElementById("intercontinental-name").innerText = "InterContinental";
-                document.getElementById("intercontinental-description").innerText = "InterContinental Hotels provide a refined stay worldwide.";
-                document.querySelector("button").innerText = "Switch to Arabic";
-                document.documentElement.lang = "en"; // تغيير اللغة إلى الإنجليزية
-            } else {
-                document.getElementById("title").innerText = "مرحبا بك في موقع حجز الفنادق";
-                document.getElementById("available-hotels").innerText = "الفنادق المتاحة";
-                document.getElementById("marriott-name").innerText = "Marriott";
-                document.getElementById("marriott-description").innerText = "فندق ماريوت يقدم خدمات فاخرة في مواقع متنوعة.";
-                document.getElementById("hilton-name").innerText = "Hilton";
-                document.getElementById("hilton-description").innerText = "فندق هيلتون يقدم تجربة مريحة ومميزة للزوار.";
-                document.getElementById("intercontinental-name").innerText = "InterContinental";
-                document.getElementById("intercontinental-description").innerText = "فندق إنتركونتيننتال يقدم تجربة إقامة راقية حول العالم.";
-                document.querySelector("button").innerText = "Switch to English";
-                document.documentElement.lang = "ar"; // تغيير اللغة إلى العربية
-            }
-        }
-    </script>
 </body>
 </html>
