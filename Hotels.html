@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>مرحبا بك في موقع حجز الفنادق</h1>
+    </header>
 
+    <section class="hotel-list">
+        <h2>الفنادق المتاحة</h2>
+        <div class="hotel" id="marriott">
+            <img src="marriott.jpg" alt="Marriott Hotel" class="hotel-img">
+            <h3>Marriott</h3>
+            <p>فندق ماريوت يقدم خدمات فاخرة في مواقع متنوعة.</p>
+            <button onclick="bookHotel('Marriott')">احجز الآن</button>
+        </div>
+
+        <div class="hotel" id="hilton">
+            <img src="hilton.jpg" alt="Hilton Hotel" class="hotel-img">
+            <h3>Hilton</h3>
+            <p>فندق هيلتون يقدم تجربة مريحة ومميزة للزوار.</p>
+            <button onclick="bookHotel('Hilton')">احجز الآن</button>
+        </div>
+
+        <div class="hotel" id="ihg">
+            <img src="ihg.jpg" alt="IHG Hotel" class="hotel-img">
+            <h3>IHG</h3>
+            <p>فنادق IHG توفر أماكن إقامة راقية حول العالم.</p>
+            <button onclick="bookHotel('IHG')">احجز الآن</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
