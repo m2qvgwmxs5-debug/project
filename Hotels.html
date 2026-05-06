@@ -9,7 +9,8 @@
 <body>
 
     <header>
-        <h1 id="title">مرحبا بك في موقع حجز الفنادق</h1>
+        <!-- تغيير النص هنا -->
+        <h1 id="title">احجز اقامتك واستمتع بها معنا في LuxuryStay حيث تجد الفخامة والرفاهية</h1>
         <!-- زر لتبديل اللغة -->
         <button onclick="switchLanguage()">Switch to English</button>
     </header>
@@ -47,7 +48,7 @@
         function switchLanguage() {
             // التبديل بين النصوص العربية والإنجليزية
             if (document.documentElement.lang === "ar") {
-                document.getElementById("title").innerText = "Welcome to the Hotel Booking Site";
+                document.getElementById("title").innerText = "Book your stay and enjoy it with us at LuxuryStay, where luxury and comfort meet.";
                 document.getElementById("available-hotels").innerText = "Available Hotels";
                 document.getElementById("marriott-name").innerText = "Marriott";
                 document.getElementById("marriott-description").innerText = "Marriott Hotel offers luxurious services in various locations.";
@@ -58,7 +59,7 @@
                 document.querySelector("button").innerText = "Switch to Arabic";
                 document.documentElement.lang = "en"; // تغيير اللغة إلى الإنجليزية
             } else {
-                document.getElementById("title").innerText = "مرحبا بك في موقع حجز الفنادق";
+                document.getElementById("title").innerText = "احجز اقامتك واستمتع بها معنا في LuxuryStay حيث تجد الفخامة والرفاهية";
                 document.getElementById("available-hotels").innerText = "الفنادق المتاحة";
                 document.getElementById("marriott-name").innerText = "Marriott";
                 document.getElementById("marriott-description").innerText = "فندق ماريوت يقدم خدمات فاخرة في مواقع متنوعة.";
