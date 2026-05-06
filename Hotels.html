@@ -9,6 +9,8 @@
 <body>
 
     <header>
+        <!-- زر تغيير اللغة -->
+        <button onclick="switchLanguage()">Switch to English</button>
         <h1 id="title">مرحبا بك في LuxuryStay</h1>
     </header>
 
@@ -39,6 +41,52 @@
     </section>
 
     <script src="script.js"></script>
+
+    <script>
+        const texts = {
+            ar: {
+                title: "مرحبا بك في LuxuryStay",
+                availableHotels: "الفنادق المتاحة",
+                marriottName: "Marriott",
+                marriottDescription: "فندق ماريوت يقدم خدمات فاخرة في مواقع متنوعة.",
+                hiltonName: "Hilton",
+                hiltonDescription: "فندق هيلتون يقدم تجربة مريحة ومميزة للزوار.",
+                intercontinentalName: "InterContinental",
+                intercontinentalDescription: "فندق إنتركونتيننتال يقدم تجربة إقامة راقية حول العالم.",
+                button: "Switch to English"
+            },
+            en: {
+                title: "Welcome to LuxuryStay",
+                availableHotels: "Available Hotels",
+                marriottName: "Marriott",
+                marriottDescription: "Marriott Hotel offers luxurious services in various locations.",
+                hiltonName: "Hilton",
+                hiltonDescription: "Hilton Hotel offers a comfortable and exceptional experience for guests.",
+                intercontinentalName: "InterContinental",
+                intercontinentalDescription: "InterContinental Hotels provide a refined stay worldwide.",
+                button: "Switch to Arabic"
+            }
+        };
+
+        let currentLang = 'ar'; // اللغة الافتراضية هي العربية
+
+        // دالة لتبديل النصوص بين العربية والإنجليزية
+        function switchLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar'; // التبديل بين اللغتين
+            document.documentElement.lang = currentLang; // تغيير اللغة في HTML
+
+            // تحديث النصوص في الصفحة
+            document.getElementById("title").innerText = texts[currentLang].title;
+            document.getElementById("available-hotels").innerText = texts[currentLang].availableHotels;
+            document.getElementById("marriott-name").innerText = texts[currentLang].marriottName;
+            document.getElementById("marriott-description").innerText = texts[currentLang].marriottDescription;
+            document.getElementById("hilton-name").innerText = texts[currentLang].hiltonName;
+            document.getElementById("hilton-description").innerText = texts[currentLang].hiltonDescription;
+            document.getElementById("intercontinental-name").innerText = texts[currentLang].intercontinentalName;
+            document.getElementById("intercontinental-description").innerText = texts[currentLang].intercontinentalDescription;
+            document.querySelector("button").innerText = texts[currentLang].button;
+        }
+    </script>
 
 </body>
 </html>
