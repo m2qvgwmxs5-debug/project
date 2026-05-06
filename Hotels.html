@@ -1,38 +1,17 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LuxuryStay</title>
+    <title>حجز الفنادق</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
-        <h1 id="title">مرحبا بك في LuxuryStay</h1>
-    </header>
-
-    <section class="hotel-list">
-        <h2 id="available-hotels">الفنادق المتاحة</h2>
-
-        <div class="hotel" id="marriott">
-            <img src="https://images.unsplash.com/photo-1607124010642-a7449ead2192?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFycmlvdHQlMjBob3RlbHxlbnwwfHwwfHx8MA%3D%3D" alt="Marriott Hotel" class="hotel-img">
-            <h3 id="marriott-name">Marriott</h3>
-            <p id="marriot…
-[٤:٢٤ م, ٦‏/٥‏/٢٠٢٦] أمل: <!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LuxuryStay</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-    <header>
-        <!-- زر تغيير اللغة -->
+        <h1 id="title">مرحبا بك في موقع حجز الفنادق</h1>
+        <!-- زر لتبديل اللغة -->
         <button onclick="switchLanguage()">Switch to English</button>
-        <h1 id="title">مرحبا بك في LuxuryStay</h1>
     </header>
 
     <section class="hotel-list">
@@ -64,12 +43,11 @@
     <script src="script.js"></script>
 
     <script>
-        let isArabic = true;  // تعيين اللغة الافتراضية إلى العربية
-
-        // دالة لتبديل النصوص بين العربية والإنجليزية
+        // دالة لتبديل النصوص بين اللغة العربية والإنجليزية
         function switchLanguage() {
-            if (isArabic) {
-                document.getElementById("title").innerText = "Welcome to LuxuryStay";
+            // التبديل بين النصوص العربية والإنجليزية
+            if (document.documentElement.lang === "ar") {
+                document.getElementById("title").innerText = "Welcome to the Hotel Booking Site";
                 document.getElementById("available-hotels").innerText = "Available Hotels";
                 document.getElementById("marriott-name").innerText = "Marriott";
                 document.getElementById("marriott-description").innerText = "Marriott Hotel offers luxurious services in various locations.";
@@ -78,9 +56,9 @@
                 document.getElementById("intercontinental-name").innerText = "InterContinental";
                 document.getElementById("intercontinental-description").innerText = "InterContinental Hotels provide a refined stay worldwide.";
                 document.querySelector("button").innerText = "Switch to Arabic";
-                document.documentElement.lang = "en";  // تغيير اللغة إلى الإنجليزية
+                document.documentElement.lang = "en"; // تغيير اللغة إلى الإنجليزية
             } else {
-                document.getElementById("title").innerText = "مرحبا بك في LuxuryStay";
+                document.getElementById("title").innerText = "مرحبا بك في موقع حجز الفنادق";
                 document.getElementById("available-hotels").innerText = "الفنادق المتاحة";
                 document.getElementById("marriott-name").innerText = "Marriott";
                 document.getElementById("marriott-description").innerText = "فندق ماريوت يقدم خدمات فاخرة في مواقع متنوعة.";
@@ -89,12 +67,9 @@
                 document.getElementById("intercontinental-name").innerText = "InterContinental";
                 document.getElementById("intercontinental-description").innerText = "فندق إنتركونتيننتال يقدم تجربة إقامة راقية حول العالم.";
                 document.querySelector("button").innerText = "Switch to English";
-                document.documentElement.lang = "ar";  // تغيير اللغة إلى العربية
+                document.documentElement.lang = "ar"; // تغيير اللغة إلى العربية
             }
-
-            isArabic = !isArabic;  // التبديل بين اللغتين
         }
     </script>
-
-</body>  
-        </html>
+</body>
+</html>
